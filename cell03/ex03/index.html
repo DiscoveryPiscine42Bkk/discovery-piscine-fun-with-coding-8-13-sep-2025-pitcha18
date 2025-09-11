@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+            font-size: 18px;
+            text-align: center;
+            margin-top: 40px;
+            margin-left: 40%;
+            background-color: #ffffcf;
+        }
+        button {
+            background-color: #ffcccf;
+            border: 2px solid #ffcccf; 
+            border-radius: 15px;
+            color: black;
+            font-family: 'Kanit', sans-serif;
+            font-size: 22px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        div {
+            margin-top: 10px;
+        }
+        .box {
+            border: 2px solid #ffcccf;
+            width: 300px;
+            background-color: skyblue;
+            border-radius: 25px;
+            padding: 10px;
+        }
+        #ft_list div {
+            padding: 6px;
+            margin: 5px 0;
+            background-color: white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+    <script src="todo.js" defer></script>
+</head>
+<body onload="checkList()">
+    <div class="box">
+        <button type="button" onclick="addTask()">New</button>
+        <div id="ft_list"></div>
+    </div>
+</body>
+</html>

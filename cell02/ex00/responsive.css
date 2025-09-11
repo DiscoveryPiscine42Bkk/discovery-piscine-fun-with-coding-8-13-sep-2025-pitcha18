@@ -1,0 +1,40 @@
+/* menu.css */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;   /* จัดให้อยู่กึ่งกลางแนวนอน */
+    align-items: center;       /* จัดให้อยู่กึ่งกลางแนวตั้ง */
+    background-color: #ffcccf;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+label {
+    display: block;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+select {
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 12px;
+    border: 2px solid #ff9999;
+    background: #fff;
+    transition: 0.3s;
+}
+
+select:hover {
+    border-color: #ff4d6d;
+    box-shadow: 0 0 8px rgba(255, 77, 109, 0.5);
+}
