@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: white;
+}
+
+/* ---------------- NAV ---------------- */
+.header_top {
+  position: sticky;
+  top: 0;
+}
+
+nav {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  height: 50px;
+  background: #AEBDCA;
+  font-size: 0;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1);
+}
+
+nav a {
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+  line-height: 50px;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  text-align: center;
+}
+
+nav .animation {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  z-index: 0;
+  background: #e7eff8;
+  border-radius: 8px;
+  transition: all .5s ease 0s;
+}
+
+nav a:nth-child(1) { width: 33.33%; }
+nav a:nth-child(2) { width: 33.33%; }
+nav a:nth-child(3) { width: 33.33%; }
+
+nav a:nth-child(1):hover~.animation { width: 33.33%; left: 0; }
+nav a:nth-child(2):hover~.animation { width: 33.33%; left: 33.33%; }
+nav a:nth-child(3):hover~.animation { width: 33.33%; left: 66.66%; }
+
+/* ---------------- HEADER ---------------- */
+.background-image {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://4kwallpapers.com/images/walls/thumbs_3t/17256.png);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header-info {
+  font-size: 50px;
+  text-align: center;
+  justify-content: center;
+  color: black;
+}
+
+/* ---------------- ABOUT ---------------- */
+.about-me {
+  padding: 3rem;
+  text-align: center;
+  background-color: azure;
+}
+
+.profile-pic {
+  width: 250px;
+  height: 250px; 
+  object-fit: cover; 
+  border-radius: 50%; 
+  border: 4px solid #AEBDCA; 
+  margin: 2rem;
+}
+
+.about-me p {
+  font-size: large;
+  padding: 1rem 0;
+}
+
+/* ---------------- SKILLS ---------------- */
+.myskill {
+  padding: 3rem 1rem;
+  background-color: rgb(245, 252, 211);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.myskill h1 {
+  margin: 2rem;
+}
+
+.myskill1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.skill {
+  width: 200px;
+  height: 260px;
+  border-radius: 10px;
+  background-color: rgb(255, 211, 218);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform-origin: center top;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+.imgskill {
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  background-color: #ddd;
+}
+
+.skill-text {
+  background-color: (255, 211, 218);
+  height: 120px;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-text h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.imgskill.c {
+  background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg");
+}
+
+.imgskill.htmlcss {
+  background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg");
+}
+
+.imgskill.js {
+  background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg");
+}
+
+.imgskill.python {
+  background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg");
+}
+
+.imgskill.php {
+  background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg");
+}
+
+.imgskill.mysql {
+  background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg");
+}
+
+.imgskill.arduino {
+  background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg");
+}
+
+.imgskill.raspberry {
+  background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/raspberrypi/raspberrypi-original.svg");
+}
+
+.imgskill {
+  height: 150px;
+  background-size: 60%; 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: azure;
+  border-bottom: 2px solid white;
+  border-radius: 8px 8px 0 0;
+}
+
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .myskill1 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .myskill1 {
+    grid-template-columns: 1fr;
+  }
+  .skill {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* ---------------- CONTACT ---------------- */
+.contact {
+  padding: 7px;
+  background-color: rgb(255, 211, 218);
+}
+.contact h4 {
+  text-align: center;
+  font-size: 30px;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+  background-color: azure;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.one, .two {
+  margin: 20px;
+}
